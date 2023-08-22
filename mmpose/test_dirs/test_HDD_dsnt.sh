@@ -1,0 +1,1 @@
+ CUDA_VISIBLE_DEVICES=3 python tools/test.py /data-8T/lzy/mmpose/configs/body_2d_keypoint/topdown_regression/mpii/td-dsnt_mobilenetv2_8xb64-210e_mpii-256x192.py /data-8T/lzy/mmpose/work_dirs/td-dsnt_mobilenetv2_8xb64-210e_mpii-256x192/best_pck_PCKh_epoch_210.pth --out test_dirs/test_HDD_dsnt2.json

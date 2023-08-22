@@ -1,0 +1,10 @@
+{"pck/Head": 92.7012278308322, "pck/Shoulder": 92.3913043478261, "pck/Elbow": 81.40455666312627, "pck/Wrist": 72.33467432896212, "pck/Hip": 84.28246913260634, "pck/Knee": 74.8938262342416, "pck/Ankle": 65.87141889713357, "pck/PCKh": 81.61852719229768, "pck/PCKh@0.1": 18.425708794227777}
+
+07/11 19: 46: 36 - mmengine - INFO - Epoch(test) [
+    50/93
+]    eta: 0: 00: 18  time: 0.435589  data_time: 0.184111  memory: 510  
+07/11 19: 46: 52 - mmengine - INFO - Evaluating MpiiPCKAccuracy (normalized by ``"head_size"``)...
+07/11 19: 46: 52 - mmengine - INFO - Evaluating MpiiPCKAccuracy (normalized by ``"head_size"``)...
+07/11 19: 46: 52 - mmengine - INFO - Epoch(test) [
+    93/93
+]    pck/Head: 92.701228  pck/Shoulder: 92.391304  pck/Elbow: 81.404557  pck/Wrist: 72.334674  pck/Hip: 84.282469  pck/Knee: 74.893826  pck/Ankle: 65.871419  pck/PCKh: 81.618527  pck/PCKh@0.1: 18.425709  data_time: 0.177576  time: 0.406711

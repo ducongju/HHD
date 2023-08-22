@@ -1,0 +1,43 @@
+import hid
+import time
+
+data1 = [0xF4, 0x4F, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x02, 0xED, 0xF4, 0x4F, 0x01, 0x01, 0x00,
+         0x00, 0x00, 0x00, 0x02, 0xED, 0xFB, 0xBF, 0x0A, 0x22, 0x03, 0x7b, 0x0A, 0x0A, 0x00, 0xBe, 0xED]
+data2 = [0x00, 0xFB, 0xBF, 0x18, 0x23, 0x5A, 0x5A, 0x5A, 0x5A, 0x5A, 0x5A, 0x5A,
+         0x3C, 0x4C, 0x6E, 0x5A, 0x5A, 0x78, 0x68, 0x46, 0x5A, 0x32, 0x32, 0x00, 0x3F, 0xED]
+data3 = "00 fb bf 0a 22 03 7b 0a 0a 00 be ed"
+data3 = bytes.fromhex(data3)
+for device_dict in hid.enumerate():
+    keys = list(device_dict)
+    keys.sort()
+    for key in keys:
+        print("%s:%s" % (key, device_dict[key]))
+    print()
+
+vid = 0x0525
+pid = 0xA4AC
+
+
+h = hid.device()
+h.open(vid, pid)
+#answer = h.read(10000)
+print("Manufacturer: %s" % h.get_manufacturer_string())
+print("Product: %s" % h.get_product_string())
+print("Serial No: %s" % h.get_serial_number_string())
+
+h.write(data2)
+# time.sleep(0.1)
+# while True:
+#     d = h.read(64)
+#     if d:
+#         print(d)
+#     else:
+#         print("nothing")
+#         break
+
+print("Closing the device")
+h.close()
+# answer = h.read(100)
+# print('-2-')
+# print(answer)
+# h.close()

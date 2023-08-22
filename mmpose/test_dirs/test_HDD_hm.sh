@@ -1,0 +1,1 @@
+ CUDA_VISIBLE_DEVICES=3 python tools/test.py configs/body_2d_keypoint/topdown_heatmap/mpii/td-hm_mobilenetv2_8xb64-210e_mpii-256x256.py mobilenetv2_mpii_256x256-e068afa7_20200812.pth --out test_dirs/test_HDD_hm2.json
